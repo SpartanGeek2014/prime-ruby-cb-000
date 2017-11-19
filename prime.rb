@@ -14,11 +14,11 @@ def sieve(max)
     # Skip if nil
     next unless p
 
-    # Break if we are past the square root of the max value
+    # this will break if past the square root max value
     break if p*p > max
     counter += 1
-    # Start at the square of the current number, and step through.
-    # Go up to the max value, by multiples of the current number, and replace
+    # Start at square of the current number, and step through.
+    # Will go up to a max value, by multiples of the current number, and replace
     # that value with nil in the primes array
     (p*p).step(max,p) { |m| primes[m] = nil }
   end
